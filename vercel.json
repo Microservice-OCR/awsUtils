@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "/api/**/*.go",
+            "use": "@vercel/go"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/upload",
+            "methods": ["POST"],
+            "dest": "/api/upload.go"
+        },
+        {
+            "src": "/api/image/(.*)",
+            "methods": ["GET"],
+            "dest": "/api/image.go"
+        }
+    ]
+}
