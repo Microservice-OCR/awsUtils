@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+
+  awsutils:   
+    build:
+      context: .
+      dockerfile: Dockerfile
+      platforms: 
+        - "linux/amd64"
+    env_file:
+      - .env
+    ports:
+      - ${AWS_PORT}:${AWS_PORT}
