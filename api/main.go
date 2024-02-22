@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func main() {
+func Main() {
 
 	AWS_PORT, ok := os.LookupEnv("AWS_PORT")
 	if !ok {
