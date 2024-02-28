@@ -25,7 +25,7 @@ func Get(filename string) ([]byte,error){
     s3Svc := s3.New(sess)
     result, err := s3Svc.GetObject(&s3.GetObjectInput{
         Bucket: aws.String(bucket),
-        Key:    aws.String("6d16dae1-8308-46b6-b202-1b0f92490626.png"),
+        Key:    aws.String(filename),
     })
 
     if err != nil {
